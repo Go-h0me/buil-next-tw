@@ -161,7 +161,7 @@ function Input() {
             </div>
             <button
               className="rounded-full bg-[#1d9bf0]
-                px-4 py-1.5 font-bold text-white shadow-md hover:bg-[#1a8cd8]
+                px-4 py-1.5 font-bold text-white shadow-md hover:bg-[#156194]
                 disabled:cursor-default disabled:opacity-50
                 disabled:hover:bg-[#1d9bf0]
                 "

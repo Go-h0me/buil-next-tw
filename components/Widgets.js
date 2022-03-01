@@ -20,13 +20,13 @@ function Widgets({ trendingResults, followResults }) {
           rounded-full bg-[#202327] p-3
           "
         >
-          <SearchIcon className=" h-5 z-50 text-gray-500" />
+          <SearchIcon className=" z-50 h-5 text-gray-500" />
           <input
             type="text"
             className="out-line absolute inset-0 
-    w-full border border-transparent bg-transparent pl-11
-    text-[#d9d9d9] placeholder-gray-400 focus:border-[#1d9bf0]
-    focus:shadow-lg rounded-full focus:bg-black
+    w-full rounded-full border border-transparent bg-transparent
+    pl-11 text-[#d9d9d9] placeholder-gray-400
+    focus:border-[#1d9bf0] focus:bg-black focus:shadow-lg
     
     "
             placeholder="Search your likes"
@@ -59,11 +59,11 @@ function Widgets({ trendingResults, followResults }) {
         <h4 className="px-4 text-xl font-bold">Who to follow</h4>
         {followResults.map((result, index) => (
           <div
-          className="cursor-pointer
+            className="cursor-pointer
         items-center px-4 py-3 transition
-        duration-200 ease-out hover:bg-white hover:bg-opacity-[0.03]
+        duration-200 ease-out hover:bg-white hover:bg-opacity-[0.03] flex
           "
-          key={index}
+            key={index}
           >
             <Image
               src={result.userImg}
@@ -80,23 +80,29 @@ function Widgets({ trendingResults, followResults }) {
               >
                 {result.username}
               </h4>
-              <h5 className='text-gray-500
-              text-[15px]
-              '>{result.tag}</h5>
+              <h5
+                className="text-[15px]
+              text-gray-500
+              "
+              >
+                {result.tag}
+              </h5>
             </div>
-            <button className='ml-auto bg-white text-black rounded-full
-            font-bold text-sm py-1.5 px-3.5
-            '>
-          Follow
+            <button
+              className="ml-auto rounded-full bg-white py-1.5
+            px-3.5 text-sm font-bold text-black
+            "
+            >
+              Follow
             </button>
           </div>
         ))}
 
         <button
           className="flex
-        w-full  items-center justify-between px-4 py-3 font-light
-        text-[#1d9bf0] transition duration-200 ease-out hover:bg-white hover:bg-opacity-[0.03]
-        cursor-pointer
+        w-full  cursor-pointer items-center justify-between px-4 py-3
+        font-light text-[#1d9bf0] transition duration-200 ease-out hover:bg-white
+        hover:bg-opacity-[0.03]
         "
         >
           Show More
